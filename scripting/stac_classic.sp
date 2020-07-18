@@ -1093,7 +1093,7 @@ public ConVarCheck(QueryCookie cookie, int Cl, ConVarQueryResult result, const c
     {
         // save fov to var to reset later with netpropcheck
         fovDesired[Cl] = StringToInt(cvarValue);
-        if (StringToInt(cvarValue) > 90)
+        if (StringToInt(cvarValue) > 130)
         {
             char reason[256];
             Format(reason, sizeof(reason), "%t", "fovBanMsg", Cl);
