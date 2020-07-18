@@ -4,6 +4,8 @@
 ## An Anti Cheat SourceMod Plugin for Team Fortress 2
 
 
+## THIS BRANCH IS ONLY FOR TF2 CLASSIC AND IS EXTREMELY EXPERIMENTAL, USE WITH CAUTION
+
 ### This plugin can currently prevent:
 - interp/lerp abuse (some detection methods only available on default tickrate servers)
 *(kick if outside of values you set with `stac_min_interp_ms` and `stac_max_interp_ms`)*

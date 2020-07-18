@@ -6,14 +6,15 @@
 #include <sourcemod>
 #include <morecolors>
 #include <regex>
-#include <sdktools>
-#include <tf2_stocks>
+//#include <sdktools>
+#include <tf2c>
+//#include <tf2_stocks>
 #include <autoexecconfig>
 #undef REQUIRE_PLUGIN
 #include <updater>
 #include <sourcebanspp>
 
-#define PLUGIN_VERSION  "3.2.2"
+#define PLUGIN_VERSION  "3.2.2classic"
 #define UPDATE_URL      "https://raw.githubusercontent.com/stephanieLGBT/StAC-tf2/master/updatefile.txt"
 
 public Plugin myinfo =
@@ -704,6 +705,7 @@ ClearClBasedVars(userid)
     // clear all old values for cli id based stuff
     turnTimes[Cl]      = 0;
     pSilentDetects[Cl] = 0;
+    bhopDetects[Cl]    = 0;
     fakeAngDetects[Cl] = 0;
 //  aimSnapDetects[Cl] = 0;
     timeSinceSpawn[Cl] = 0.0;
@@ -1445,6 +1447,10 @@ stock bool IsClientPlaying(client)
                 team == TFTeam_Red
                  ||
                 team == TFTeam_Blue
+                 ||
+                team == TFTeam_Green
+                 ||
+                team == TFTeam_Yellow
             )
         )
     {
